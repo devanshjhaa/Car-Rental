@@ -1,7 +1,7 @@
 import Booking from "../models/Booking.js";
 import Car from "../models/Car.js";
 
-// ✅ Helper: check if a car is available between dates
+//  Helper: check if a car is available between dates
 const checkAvailability = async (carId, pickupDate, returnDate) => {
   const bookings = await Booking.find({
     car: carId,
@@ -15,7 +15,7 @@ const checkAvailability = async (carId, pickupDate, returnDate) => {
   return bookings.length === 0;
 };
 
-// ✅ API: Check available cars for a given date & location
+//  API: Check available cars for a given date & location
 export const checkAvailabilityofCar = async (req, res) => {
   try {
     const { location, pickupDate, returnDate } = req.body;
@@ -35,7 +35,7 @@ export const checkAvailabilityofCar = async (req, res) => {
   }
 };
 
-// ✅ API: Create Booking
+//  API: Create Booking
 export const createBooking = async (req, res) => {
   try {
     const { _id } = req.user;
@@ -67,7 +67,7 @@ export const createBooking = async (req, res) => {
   }
 };
 
-// ✅ API: Get user bookings
+//  API: Get user bookings
 export const getUserBookings = async (req, res) => {
   try {
     const { _id } = req.user;
@@ -78,7 +78,7 @@ export const getUserBookings = async (req, res) => {
   }
 };
 
-// ✅ API: Get owner bookings
+//  API: Get owner bookings
 export const getOwnerBookings = async (req, res) => {
   try {
     if (req.user.role !== "owner") {
@@ -95,7 +95,7 @@ export const getOwnerBookings = async (req, res) => {
   }
 };
 
-// ✅ API: Change booking status
+//  API: Change booking status
 export const changeBookingStatus = async (req, res) => {
   try {
     const { _id } = req.user;

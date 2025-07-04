@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const { Schema, model, Types } = mongoose;
 
 const carSchema = new Schema({
-  owner: { type: Types.ObjectId, ref: "User", required: true }, // ✅ valid ref
+  owner: { type: Types.ObjectId, ref: "User", required: true }, 
   brand: { type: String, required: true },
   model: { type: String, required: true },
   image: { type: String },

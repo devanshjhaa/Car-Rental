@@ -149,7 +149,7 @@ export const changeRoleOwner = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
-// Optional: Update owner profile image
+// Update owner profile image
 export const updateUserImage = async (req, res) => {
   try {
     const { _id } = req.user;

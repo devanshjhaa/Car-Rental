@@ -223,7 +223,7 @@ const AddCar = () => {
           ></textarea>
         </div>
 
-        {/* ✅ Submit Button */}
+        {/*  Submit Button */}
         <button
           type="submit"
           className="flex items-center gap-2 px-4 py-2.5 mt-6 bg-blue-600 text-white rounded-md font-medium w-max mx-auto hover:bg-blue-700 transition"

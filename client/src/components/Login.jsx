@@ -26,7 +26,7 @@ const Login = () => {
         // Store token
         setToken(data.token);
         localStorage.setItem('token', data.token);
-        axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`; // ✅ crucial line
+        axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
 
         toast.success(data.message || `${state === 'login' ? 'Logged in' : 'Registered'} successfully`);
 

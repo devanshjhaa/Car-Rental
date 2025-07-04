@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import Car from "../models/Car.js";
 
-// ✅ Generate JWT Token with user role
+//  Generate JWT  with user role
 const generateToken = (userId, role) => {
   const secret = process.env.JWT_SECRET;
 
@@ -12,12 +12,12 @@ const generateToken = (userId, role) => {
     return null;
   }
 
-  const payload = { id: userId, role }; // ✅ include role in token
+  const payload = { id: userId, role }; 
 
   return jwt.sign(payload, secret, { expiresIn: "7d" });
 };
 
-// ✅ Register (Sign Up)
+//  Register 
 export const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -64,7 +64,7 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// ✅ Login
+//  Login
 export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -82,7 +82,7 @@ export const loginUser = async (req, res) => {
     }
 
     // Generate token
-    const token = generateToken(user._id.toString(), user.role); // ✅ include role
+    const token = generateToken(user._id.toString(), user.role); 
 
     if (!token) {
       return res.json({ success: false, message: "Token generation failed" });
@@ -99,12 +99,12 @@ export const loginUser = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("❌ Error during login:", error.message);
+    console.error(" Error during login:", error.message);
     return res.json({ success: false, message: error.message });
   }
 };
 
-// ✅ Get user data using JWT (Protected Route)
+//  Get user data using JWT (Protected Route)
 export const getUserData = async (req, res) => {
   try {
     const user = req.user;
@@ -114,7 +114,7 @@ export const getUserData = async (req, res) => {
   }
 };
 
-// ✅ Get all available cars
+//  Get all available cars
 export const getCars = async (req, res) => {
   try {
     const cars = await Car.find({ isAvailable: true });

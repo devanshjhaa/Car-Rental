@@ -37,7 +37,7 @@ const CarDetails = () => {
 
       if (data.success) {
         toast.success(data.message);
-        navigate('/my-bookings'); // ✅ corrected typo
+        navigate('/my-bookings');
       } else {
         toast.error(data.message);
       }

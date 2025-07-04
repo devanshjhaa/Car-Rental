@@ -18,17 +18,17 @@ export const AppProvider = ({ children }) => {
   const [pickupDate, setPickupDate] = useState(null);
   const [returnDate, setReturnDate] = useState(null);
 
-  const [cars, setCars] = useState([]); // ✅ fixed: initialized as an array
+  const [cars, setCars] = useState([]);
   const [showLogin, setShowLogin] = useState(false);
 
-  // ✅ Fetch logged in user data
+  
   const fetchUser = async () => {
     try {
       console.log('🔐 Sending request with auth header:', axios.defaults.headers.common['Authorization']);
 
       const { data } = await axios.get('/api/user/data');
 
-      console.log('✅ Response from /api/user/data:', data);
+      console.log(' Response from /api/user/data:', data);
 
       if (data.success) {
         setUser(data.user);
@@ -37,14 +37,14 @@ export const AppProvider = ({ children }) => {
         navigate('/');
       }
     } catch (error) {
-      console.error('❌ fetchUser error:', error.response?.data || error.message);
+      console.error(' fetchUser error:', error.response?.data || error.message);
       toast.error(error.message);
     }
   };
 
 
 
-  // ✅ Fetch all cars
+  //  Fetch all cars
   const fetchCars = async () => {
     try {
       const { data } = await axios.get('/api/user/cars');
@@ -54,7 +54,7 @@ export const AppProvider = ({ children }) => {
     }
   };
 
-  // ✅ Logout
+  // Logout
   const logout = () => {
     localStorage.removeItem('token');
     setToken(null);
@@ -64,30 +64,30 @@ export const AppProvider = ({ children }) => {
     toast.success('You have been logged out');
   };
 
-  // ✅ Load token from localStorage
+  //  Load token from localStorage
 useEffect(() => {
   const storedToken = localStorage.getItem('token');
 
   if (storedToken) {
-    // ✅ Set token in state and axios default headers FIRST
+    //  Set token in state and axios default headers FIRST
     setToken(storedToken);
     axios.defaults.headers.common['Authorization'] = `Bearer ${storedToken}`;
-    console.log('✅ Axios header set to:', axios.defaults.headers.common['Authorization']);
+    console.log(' Axios header set to:', axios.defaults.headers.common['Authorization']);
 
-    // ✅ THEN call fetchUser and fetchCars
+    //  THEN call fetchUser and fetchCars
     fetchUser();
     fetchCars();
   }
 }, []);
 
 
-  // ✅ If token exists, fetch user and set auth header
+  //  If token exists, fetch user and set auth header
   useEffect(() => {
     if (token) {
       const formattedToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
       axios.defaults.headers.common['Authorization'] = formattedToken;
 
-      console.log('✅ Axios Authorization header set to:', formattedToken); // Debug
+      console.log(' Axios Authorization header set to:', formattedToken); // Debug
 
       fetchUser();
       fetchCars();
@@ -97,7 +97,7 @@ useEffect(() => {
 
 
 
-  // ✅ Context value
+  //  Context value
   const value = {
     navigate,
     currency,

@@ -18,13 +18,13 @@ const Cars = () => {
   const [filteredCars, setFilteredCars] = useState([]);
   const [input, setInput] = useState('');
 
-  // 🔍 Filter cars based on search input
+  //  Filter cars based on search input
   const applyFilter = () => {
     if (input.trim() === '') {
       setFilteredCars(cars);
     } else {
       const filtered = cars.filter((car) =>
-        `${car.brand} ${car.model} ${car.description || ''}` // ✅ null-safe
+        `${car.brand} ${car.model} ${car.description || ''}` 
           .toLowerCase()
           .includes(input.toLowerCase())
       );
@@ -54,7 +54,7 @@ const Cars = () => {
     }
   };
 
-  // 📦 On mount or cars update
+  //  On mount or cars update
   useEffect(() => {
     if (isSearchData) {
       searchCarAvailability();
@@ -63,7 +63,7 @@ const Cars = () => {
     }
   }, [cars, isSearchData]);
 
-  // 🔁 Filter on input change
+  //  filter on input change
   useEffect(() => {
     if (!isSearchData) {
       applyFilter();
