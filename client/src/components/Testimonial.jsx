@@ -1,13 +1,13 @@
 import React from 'react';
 import Title from './Titles';
 import { assets } from '../assets/assets';
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Testimonial = () => {
   const testimonials = [
     {
       name: "Emma Rodriguez",
-      location: "Barcelona, Spain",
+      location: "Bengaluru, India",
       image: assets.testimonial_image_1,
       rating: 5,
       testimonial:
@@ -15,7 +15,7 @@ const Testimonial = () => {
     },
     {
       name: "John",
-      location: "New York, USA",
+      location: "New Delhi, India",
       image: assets.testimonial_image_2,
       rating: 5,
       testimonial:
@@ -41,10 +41,10 @@ const Testimonial = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
         {testimonials.map((testimonial, index) => (
           <motion.div
-            initial={{opacity:0,y:40}}
-            whileInView={{opacity:1,y:0}}
-            transition={{duration:0.6,delay:index*0.2,ease:'easeOut'}}
-            viewport={{once:true,amount:0.3}}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.3 }}
             key={index}
             className="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 transition-all duration-500"
           >
