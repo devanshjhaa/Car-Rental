@@ -44,8 +44,8 @@ const Footer = () => {
           <h2 className='text-base font-medium text-gray-800 uppercase'>Contact</h2>
           <ul className='mt-3 flex flex-col gap-1.5'>
             <li><a href="#">1234 Drive</a></li>
-            <li><a href="#">SF CA</a></li>
-            <li><a href="#">+1 65465465441</a></li>
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">+91 65465465441</a></li>
             <li><a href="#">info@gmail.com</a></li>
           </ul>
         </div>

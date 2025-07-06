@@ -203,10 +203,10 @@ const AddCar = () => {
             className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none'
           >
             <option value="">Select location</option>
-            <option value="New York">New York</option>
-            <option value="LA">Los Angeles</option>
-            <option value="Houston">Houston</option>
-            <option value="Chicago">Chicago</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Gurugram">Gurugram</option>
           </select>
         </div>
 

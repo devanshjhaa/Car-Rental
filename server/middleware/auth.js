@@ -8,7 +8,7 @@ const generateToken = (userId, role) => {
   const secret = process.env.JWT_SECRET;
 
   if (!secret) {
-    console.error("❌ JWT_SECRET is undefined. Check your .env file.");
+    console.error(" JWT_SECRET is undefined. Check your .env file.");
     return null;
   }
 
@@ -43,7 +43,7 @@ export const registerUser = async (req, res) => {
     const user = await User.create({ name, email, password: hashedPassword });
 
     // Generate token
-    const token = generateToken(user._id.toString(), user.role); // ✅ include role
+    const token = generateToken(user._id.toString(), user.role); //  include role
 
     if (!token) {
       return res.json({ success: false, message: "Token generation failed" });

@@ -24,7 +24,7 @@ export const AppProvider = ({ children }) => {
   
   const fetchUser = async () => {
     try {
-      console.log('🔐 Sending request with auth header:', axios.defaults.headers.common['Authorization']);
+      console.log(' Sending request with auth header:', axios.defaults.headers.common['Authorization']);
 
       const { data } = await axios.get('/api/user/data');
 
