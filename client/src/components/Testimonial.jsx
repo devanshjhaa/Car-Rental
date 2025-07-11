@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const Testimonial = () => {
   const testimonials = [
     {
-      name: "Emma Rodriguez",
+      name: "Rama Venu",
       location: "Bengaluru, India",
       image: assets.testimonial_image_1,
       rating: 5,
