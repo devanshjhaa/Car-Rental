@@ -35,7 +35,7 @@ const Testimonial = () => {
     <div className="py-28 px-6 md:px-24 xl:px-44">
       <Title
         title="What our Customers Say"
-        subTitle="Discover why discerning travelers choose StrayVenture for their luxury accommodations around the world"
+        subTitle="Discover luxury cars around you"
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
