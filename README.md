@@ -19,9 +19,25 @@ Features include **JWT authentication**, basic **role-based access**, and car li
 ## 📁 Project Structure
 Car-Rental/
 ├─ client/ # Next.js app (frontend)
+
 ├─ server/ # Express API (backend)
+
 ├─ screenshots/ # README images
+
 └─ README.md
+
+
+---
+
+## ⚙️ Setup
+
+### 1) Clone the repository
+``bash
+git clone https://github.com/devanshjhaa/Car-Rental.git
+cd Car-Rental
+
+
+
 Install
 # Frontend
 cd client
