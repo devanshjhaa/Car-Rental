@@ -1,7 +1,6 @@
 # Car Rental Platform
 
-A full-stack web application for browsing, booking, and managing car rentals.  
-Built with **Next.js, TypeScript, and TailwindCSS** on the frontend and **Express.js** with **PostgreSQL (Prisma ORM)** on the backend.  
+A full-stack web application for browsing, booking, and managing car rentals.    
 Features include **JWT authentication**, basic **role-based access**, and car listings.  
 
 🔗 Live Demo → [Car Rental Platform](https://car-rental-indol-sigma.vercel.app/)
@@ -24,11 +23,11 @@ Car-Rental/
 ├─ screenshots/ # README images
 └─ README.md
 Install
-# frontend
+# Frontend
 cd client
 npm install
 
-# backend
+# Backend
 cd ../server
 npm install
 
@@ -37,7 +36,9 @@ Environment Variables
 server/.env
 
 DATABASE_URL=postgresql://user:pass@host:5432/dbname
+
 JWT_SECRET=replace_me
+
 PORT=8080
 
 Run locally
