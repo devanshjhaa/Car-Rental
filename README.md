@@ -58,3 +58,17 @@ npm run dev
 
 Open http://localhost:3000
  in your browser.
+ ## 📸 Screenshots  
+
+### Homepage  
+![Homepage](./screenshots/homepage.png)  
+
+### User Sign-Up  
+![Sign-Up](./screenshots/signup.png)  
+
+### Car Listings  
+![Car Listings](./screenshots/car-listings.png)  
+
+### Admin Dashboard  
+![Admin Dashboard](./screenshots/admin-dashboard.png)  
+
