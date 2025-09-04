@@ -1,63 +1,66 @@
-Car Rental Platform
+# Car Rental Platform
 
-A full-stack web application for browsing, booking, and managing car rentals. Built with Next.js, TypeScript, and TailwindCSS, featuring user registration, authentication (JWT), role-based access control, and car listings.
+A full-stack web application for browsing, booking, and managing car rentals.  
+Built with **Next.js, TypeScript, and TailwindCSS** on the frontend and **Express.js** with **PostgreSQL (Prisma ORM)** on the backend.  
+Features include **JWT authentication**, basic **role-based access**, and car listings.  
 
-Deployed on Vercel → Live Demo
+🔗 Live Demo → [Car Rental Platform](https://car-rental-indol-sigma.vercel.app/)
 
-🚀 Features
+---
 
-User registration and login with JWT-based authentication
+## 🛠 Tech Stack
+- **Frontend:** Next.js, TypeScript, TailwindCSS  
+- **Backend:** Node.js, Express.js, REST APIs  
+- **Authentication:** JWT  
+- **Database:** PostgreSQL with Prisma ORM  
+- **Deployment:** Vercel (frontend), Render (backend)  
 
-Role-based access (user, owner/admin)
+---
 
-Browse and search available cars
+## 📁 Project Structure
+Car-Rental/
+├─ client/ # Next.js app (frontend)
+├─ server/ # Express API (backend)
+├─ screenshots/ # README images
+└─ README.md
+Install
+# frontend
+cd client
+npm install
 
-Add and manage car listings (for owners)
+# backend
+cd ../server
+npm install
+
+Environment Variables
+
+server/.env
+
+DATABASE_URL=postgresql://user:pass@host:5432/dbname
+JWT_SECRET=replace_me
+PORT=8080
+
+Run locally
+# in /server
+npm run dev
+
+# in /client (new terminal)
+npm run dev
+# open http://localhost:3000
+
+Features
+
+User registration & login with JWT authentication
+
+Role-based access (user / owner / admin)
+
+Browse and search car listings
+
+Owners can add and manage cars
 
 Responsive UI with TailwindCSS
 
-Deployment on Vercel
 
-🛠 Tech Stack
-
-Frontend: Next.js, TypeScript, TailwindCSS
-
-Backend: Next.js API Routes, Node.js, Express.js (if included)
-
-Authentication: JWT, OAuth (if you’ve implemented it)
-
-Database: PostgreSQL with Prisma ORM
-
-Deployment: Vercel
-
-📦 Installation
-
-Clone the repository:
-
-git clone https://github.com/devanshjhaa/car-rental.git
-cd car-rental
-
-
-Install dependencies:
-
-npm install
-# or
-yarn install
-
-
-Set up environment variables in .env:
-
-DATABASE_URL=your_postgres_url
-JWT_SECRET=your_secret
-
-
-Run the development server:
-
-npm run dev
-
-
-Open http://localhost:3000
- in your browser.
 ## 📸 Screenshots  
 
 ### Homepage  
