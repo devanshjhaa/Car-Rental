@@ -104,7 +104,7 @@ export const loginUser = async (req, res) => {
   }
 };
 
-//  Get user data using JWT (Protected Route)
+//  Get user data using JWT 
 export const getUserData = async (req, res) => {
   try {
     const user = req.user;
